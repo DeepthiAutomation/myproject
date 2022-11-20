@@ -1,0 +1,105 @@
+body {
+    background-color:#FFF2CC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    width: 50px;
+    margin-bottom: 30px;
+  }
+  /********************* TEXT *********************/
+  h1 {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: darkcyan;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+  }
+  p {
+    margin-left: 20px;
+    color: white;
+  }
+  .dropdown-labels {
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+  }
+  .other-labels {
+    margin-left: 20px;
+    color: #FFBD59;
+    font-weight: bold;
+  }
+  /********************* SECTIONS *********************/
+  
+  #visualisation {
+    margin-top: 30px;
+    width: 100%; 
+    overflow: hidden;
+    height: 430px;
+  }
+  #histogram {
+    width: 700px; 
+    height: 430px;
+    margin-left: 35px;
+    float: left; 
+  }
+  #barplot {
+    width: 700px; 
+    height: 430px;
+    margin-left: 800px;
+    margin-right: 20px;
+  }
+  #data-extract {
+    margin-top: 30px;
+    width: 100%; 
+    overflow: hidden;
+    height: 400px;
+  }
+  
+
+  /********************* DROPDOWNS *********************/
+  .dropdown {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+  }
+  .dropdown .Select-control{
+    background-color: white;
+  }
+  .dropdown .Select-menu-outer{
+    background-color: white;
+  }
+  .dropdown .Select-value{
+    background-color: #3BA27A;
+    color: white;
+    font-size: 14px;  
+  }
+  .dropdown .VirtualizedSelectFocusedOption {
+    background-color: #a5ecd1;
+    color: black;
+  }
+  .dropdown .VirtualizedSelectOption  {
+    font-size: 14px;
+  }
+  /********************* TOGGLES *********************/
+  .toggle {
+    margin-top: 8px;
+  }
+  /********************* SLIDER *********************/
+  #n-slider {
+    margin-top: 8px;
+  }
+  #n-slider .rc-slider-handle  {
+    background-color: #FFBD59;
+    border: 0px;
+  }
+  #n-slider .rc-slider-track {
+    background-color: #E6E6E6;
+  }
+  #n-slider .rc-slider-dot-active {  
+    border-color: #E6E6E6;
+  }
