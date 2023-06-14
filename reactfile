@@ -1,0 +1,50 @@
+import React, { useState } from 'react';
+
+const FileDropComponent = () => {
+  const [file, setFile] = useState(null);
+
+  const handleDrop = (event) => {
+    event.preventDefault();
+    const droppedFile = event.dataTransfer.files[0];
+    setFile(droppedFile);
+  };
+
+  const handleDragOver = (event) => {
+    event.preventDefault();
+  };
+
+  const handleFileUpload = () => {
+    if (file) {
+      const formData = new FormData();
+      formData.append('file', file);
+
+      fetch('http://example.com/upload', {
+        method: 'POST',
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => {
+          // Handle the response from the server
+          console.log(data);
+        })
+        .catch(error => {
+          // Handle any errors that occurred during the upload
+          console.error(error);
+        });
+    }
+  };
+
+  return (
+    <div
+      onDrop={handleDrop}
+      onDragOver={handleDragOver}
+      style={{ width: '300px', height: '300px', border: '1px dashed gray' }}
+    >
+      <p>Drop a file here</p>
+      {file && <p>Selected file: {file.name}</p>}
+      <button onClick={handleFileUpload}>Upload</button>
+    </div>
+  );
+};
+
+export default FileDropComponent;
