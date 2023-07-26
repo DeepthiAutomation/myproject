@@ -1,0 +1,22 @@
+import pandas as pd
+file1 = 'path/to/excel_file1.xlsx'
+file2 = 'path/to/excel_file2.xlsx'
+
+df1 = pd.read_excel(file1, engine='openpyxl')
+df2 = pd.read_excel(file2, engine='openpyxl')
+if df1.shape == df2.shape and df1.columns.tolist() == df2.columns.tolist():
+    print("The shape and columns match.")
+else:
+    print("The shape or columns do not match.")
+if df1.equals(df2):
+    print("The data in both files is identical.")
+else:
+    print("The data in the files is not identical. Differences exist.")
+merged_df = pd.merge(df1, df2, how='outer', indicator=True)
+differences = merged_df[merged_df['_merge'] != 'both']
+
+output_file = 'path/to/output_file.xlsx'
+differences.to_excel(output_file, index=False, engine='openpyxl')
+
+
+
