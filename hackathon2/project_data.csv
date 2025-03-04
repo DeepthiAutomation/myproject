@@ -1,0 +1,4 @@
+Project Name,Application Owner,SRE SPOC,Grafana URL,Splunk URL,SRE Score,SLI,SLO,Error Budget
+finance,Alice,Bob,https://grafana-a.com,https://splunk-a.com,90,99,95,10 hours
+infra,Charlie,Dave,https://grafana-b.com,https://splunk-b.com,85,98,94,15 hours
+hr,Eve,Frank,https://grafana-c.com,https://splunk-c.com,92,99.5,96,8 hours
